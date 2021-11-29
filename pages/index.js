@@ -1,14 +1,13 @@
 import GoogleProvider from "../components/auth/providers/google"
 
-export default function Home() {
+function index() {
   return (
-     <div>
-
-       <GoogleProvider/>
-
-     </div>
-     
-       
-    
+      <div>
+            <header>
+                    <GoogleProvider label="Sign Up With Google"/>                                   
+            </header>
+      </div>
   )
 }
+
+export default index

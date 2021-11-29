@@ -10,12 +10,18 @@ const Button = styled.button `
     font-weight: 600;
 `;
 
-const ProviderButton = styled.button`
-    background-color: ${props=> props.bgcolor || "transparent"};
-    display: flex;
-    justify-conent: center;
-    align-items: center;
-    gap: 0.5rem;
+const ProviderButton = styled(Button)`
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: ${props => props.width || "100%"};
+   gap: 0.25;
+   background-color: ${props => props.bgcolor || "transparent"};
+   color: #565656
+   padding: 0.5rem 2rem;
+   font-weight: 600;
+   font-size: ${props => props.size || "1.125rem"};
+   cursor: pointer;
 `
 
 export { Button, ProviderButton }
