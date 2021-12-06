@@ -21,4 +21,4 @@ function GitHubProvider({ children, ...props }) {
   );
 }
 
-export default GitHubProvider;
+export  {GitHubProvider};
