@@ -4,22 +4,16 @@ import { auth } from 'libs/firebase'
  import { Button } from "ui/buttons"
 import Login from "./styled"
 import { useState } from 'react'
-import {useRouter} from 'next/router'
-import { route } from 'next/dist/server/router'
  
  
 function UserLogin ({...props}){
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const router = useRouter()
  
     async function handleClick(e) {
         e.preventDefault();
        const isUser = await signInWithEmailAndPassword(auth, "jim@home.com", "123456")
         
-       if(isUser){
-           router.push('/todo')
-       }
     }
    
     return (
