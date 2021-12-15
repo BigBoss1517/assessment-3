@@ -6,6 +6,8 @@ import { getFirestore } from '@firebase/firestore'
 
 import firebaseConfig from './firebaseConfig'
 
+import {signInWithEmailAndPassword} from '@firebase/auth'
+
 
 
 const firebase = initializeApp(firebaseConfig)

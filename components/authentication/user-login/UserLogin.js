@@ -1,6 +1,6 @@
 import { signInWithEmailAndPassword } from '@firebase/auth'
-import {auth} from 'firebase'
 import TextInput from "ui/forms/TextInput"
+import { auth } from 'libs/firebase'
  import { Button } from "ui/buttons"
 import Login from "./styled"
 import { useState } from 'react'
