@@ -4,17 +4,13 @@ import {Title} from "ui/title"
 
 
 function ToDoPage(props) {
-   const user = useAuth
-   if(user){
-    return (
-      <>
-        <AppBar />
-        <Title>Render Build The To Do List</Title>
-      </>
-    )
-   }
-    
-  
+  const user = useAuth
+  return (
+    <>
+      <AppBar />
+      <Title>To Do List</Title>
+    </>
+  )
 }
 
 export default ToDoPage;

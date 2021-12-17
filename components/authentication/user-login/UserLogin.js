@@ -15,7 +15,7 @@ function UserLogin ({...props}){
  
     async function handleClick(e) {
         e.preventDefault();
-       const isUser = await signInWithEmailAndPassword(auth, "jim@home.com", "123456")
+       const isUser = await signInWithEmailAndPassword(auth, email, password)
         
        if(isUser){
            router.push('/todo')
@@ -24,11 +24,11 @@ function UserLogin ({...props}){
    
     return (
         <>
-        <Login {...props} onClick={handleClick}>    
+        <Login {...props}>    
          <TextInput label="Email"  onChange={(e)=> setEmail(e.currentTarget.value)} id="emailAddress" placeholder="janedoe@home.com" {...props}/>
          <TextInput label="Password" onChange={(e)=> setPassword(e.currentTarget.value)} type="password" id="emailAddress" placeholder="use a secure password" {...props}/>
     
-        <Button bgcolor="#ed4747" color="white" noBoxShadow {...props} type="submit">LOGIN</Button>
+        <Button onClick={(e)=> handleClick(e)} bgcolor="#ed4747" color="white" noBoxShadow {...props} type="submit">LOGIN</Button>
         </Login>
         </>
 
